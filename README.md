@@ -4,27 +4,37 @@
 
 Detects, stores, visualizes, and analyzes pinball gameplay data via a camera and logic device such as a Raspbery Pi.
 
-Aims to improve a players skill by finding trends and correlations in their gameplay. Also helps understand the nature of the game their are playing.
+Aims to improve a players skill by finding trends and correlations in their gameplay. Also helps understand the nature of the game they are playing.
 
-### Data Detected and Tracked
+### Analytics
 
 T2FP means time-to-first/next-point 
 
-- Ball saved, per ball
 - Date/time of game
-- Duration of ball
-- Duration of ball, not including T2FP
-- Duration of game
-- Duration of game, not including T2FP
+- Duration, per session, game, and ball (with and without T2FP)
 - GamePlayedID
-- Highscore obtained
+- Games played, per session
+- Is ball saved, per ball
+- Is highscore obtained
 - Is valid game
 - Match / free game
+- Points, per game, and ball
 - Points per minute, not including T2FP
-- Score after each ball
+- Set timeout to first/fresh game (default to 30 mins)
 - Tilt, per ball
 - Tilt warn, per ball
 - Time to first/next point, per ball (T2FP)
+
+### Perspectives
+
+Sortable by all, last x games, last x sessions, last 30 days, etc.
+
+- Averages
+- Box plot
+- Calendar (similar to GitHub's contribution calendar)
+- First/last 1 or 5 game scores
+- Omitting first, last, and only games
+- Stacked distributions
 
 ### Features
 
@@ -32,9 +42,12 @@ T2FP means time-to-first/next-point
 
 ### Features under Consideration
 
+1. Timezone support
 1. Auto-detect game based on backglass and/or playfield
 1. Multiplayer
-1. Post stats online through `pinside-vision` public website (via Pinside username, etc)
+1. Post stats online through `pinball-vision` public website (via Pinside username, etc)
+1. Real-time score accumulation, by point
+1. Gather data via data lines (opposed to camera)
 
 ### Supported Games
 
